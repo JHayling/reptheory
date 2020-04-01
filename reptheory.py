@@ -869,7 +869,8 @@ class Representation:
 
     def print_weights(self):
         """Prints the weight system as a level decomposition or a spindle
-        shape. If one wants a list form then just print the list returned by weight_system().
+        shape. If one wants a list form then just print the list returned by
+        weight_system().
 
         >>> R = Representation(DGroup, [1,0,1])
         >>> R.print_weights()
@@ -884,7 +885,7 @@ class Representation:
         """
         d = self._build_module(with_level=True)
         for key, value in d.items():
-        return
+            print(key+": ", *value)
 
     def _freudenthal_raw(self, weight, module, mult):
         """Implementation of the Freudenthal algorithm.
